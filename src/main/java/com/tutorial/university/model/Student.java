@@ -2,6 +2,10 @@ package com.tutorial.university.model;
 
 
 
+
+
+import com.tutorial.university.custumvalidation.Capitalized;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -26,10 +30,6 @@ import lombok.NoArgsConstructor;
 public class Student {
 
 
-//	"firstName":"Nithin",
-//	"lastName":"Abraham",
-//	"studentAge":23,
-//	"departmentType":CSE
 	
 	@Id
 	@SequenceGenerator(name = "student_sequence",sequenceName = "student_sequence",allocationSize = 1)
@@ -38,12 +38,13 @@ public class Student {
 	
 	@NotNull
 	@Size(min = 2,max = 20)
+	@Capitalized 
 	private String firstName;
 	@NotNull
 	@Size(min = 2,max = 20)
 	private String lastName;
 	@Min(value = 18)
-	@Max(value = 35)
+	@Max(value = 25)
 	private int studentAge;
 	@Enumerated(EnumType.STRING)
 	private Department departmentType;

@@ -27,10 +27,7 @@ public class EventController {
 	private EventServices eventServices;
 	
 	
-//	Add event
-//	Update event
-//	Delete event
-//	Get All events by date
+
 	
 	@PostMapping("/add")
 	
@@ -63,6 +60,12 @@ public class EventController {
 		
 		
 		return eventServices.getAllEventAfterTheseDate(date);
+	}
+	@GetMapping("/all")
+	
+	public Iterable<Event>getAll(){
+		
+		return eventServices.getall();
 	}
 	
 	

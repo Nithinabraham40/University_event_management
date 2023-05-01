@@ -46,6 +46,11 @@ public class EventServices {
 	
 		return eventRepository.getAllEventAfterDate(date);
 	}
+
+	public Iterable<Event> getall() {
+		
+		return eventRepository.findAll();
+	}
 	
 	
 }
