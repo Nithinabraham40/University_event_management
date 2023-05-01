@@ -1,4 +1,4 @@
-package com.tutorial.university.controler.customvalidationimpl;
+package com.tutorial.university.customvalidatorImpl;
 
 import com.tutorial.university.custumvalidation.Capitalized;
 

@@ -3,7 +3,7 @@ package com.tutorial.university.custumvalidation;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
-import com.tutorial.university.controler.customvalidationimpl.CapitalizedValidator;
+import com.tutorial.university.customvalidatorImpl.CapitalizedValidator;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
